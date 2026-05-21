@@ -1,0 +1,329 @@
+/* ১. গুগলের Hind Siliguri ফন্ট ইমপোর্ট করা */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap');
+
+/* সব باکسের সাইজিং ফিক্স করা */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ২. পুরো বডি ও পেজের থিম কালার */
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #0d1e3d; /* রয়্যাল ডার্ক ব্লু ব্যাকগ্রাউন্ড */
+  font-family: 'Hind Siliguri', sans-serif;
+  color: #ffffff;
+}
+
+/* মূল কন্টেইনার ফ্রেম */
+.poster-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #09152a 0%, #0d234d 100%);
+  border: 3px solid #1e3d75;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* ৩. হেডার ডিজাইন */
+.poster-header {
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.main-logo {
+  font-size: 38px;
+  font-weight: bold;
+  color: #fca311; /* চমৎকার হলুদ/কমলা টেক্সট */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+.sub-logo {
+  font-size: 16px;
+  color: #e5e5e5;
+  margin: 5px 0 12px 0;
+}
+
+.tagline {
+  font-size: 18px;
+  color: #00f5d4; /* ফিরোজা রঙের ফোকাস টেক্সট */
+  font-weight: bold;
+  margin: 0;
+}
+
+/* ৪. ইন্টারঅ্যাক্টিভ সার্ভিস বাটনগুলোর ডিজাইন */
+.service-button {
+  background: #ffffff;
+  color: #111111;
+  padding: 12px 20px;
+  margin-bottom: 15px;
+  border-radius: 50px; /* ক্যাপসুল সাইজ গোল */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease; /* মাউস নিলে স্মুথ ইফেক্ট দিবে */
+  cursor: pointer;
+}
+
+/* বাটনের হোভার অ্যানিমেশন */
+.service-button:hover {
+  transform: translateY(-3px); /* বাটনটি ৩ পিক্সেল উপরে উঠবে */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  background-color: #f8f9fa;
+}
+
+/* বাটনের ভেতরের আইকনের গোল ব্যাকগ্রাউন্ড */
+.button-icon {
+  font-size: 20px;
+  background: #f0f2f5;
+  padding: 8px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* আলাদা আলাদা ক্যাটাগরির বাম পাশের কালার থিম */
+.electrical-job { border-left: 15px solid #3a86ff; }
+.gas-job { border-left: 15px solid #ff5a5f; }
+.sanitary-job { border-left: 15px solid #38b000; }
+.fast-job { border-left: 15px solid #7209b7; }
+
+.button-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-text strong {
+  font-size: 16px;
+  color: #03045e;
+}
+
+.button-text span {
+  font-size: 12px;
+  color: #666666;
+}
+
+/* ৫. কলিং বাটন বা মেইন যোগাযোগ বক্স */
+.primary-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #ff5a5f 0%, #c1121f 100%);
+  border-radius: 50px;
+  padding: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(255, 90, 95, 0.3);
+  transition: transform 0.2s;
+}
+
+.primary-contact:hover {
+  transform: scale(1.02); /* ক্লিক করার সময় বা মাউস নিলে সামান্য বড় হবে */
+}
+
+.primary-contact span {
+  font-size: 16px;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+/* ৬. লাইভ গ্লোয়িং ডিস্কাউন্ট অফার ব্যানার */
+.discount-banner {
+  background: linear-gradient(135deg, #ff9f43 0%, #ff5252 100%);
+  border: 2px dashed #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 15px rgba(255, 82, 82, 0.4);
+  animation: pulse 2s infinite; /* ক্রমাগত অ্যানিমেশন হতে থাকবে */
+}
+
+.gift-icon {
+  font-size: 30px;
+}
+
+.discount-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.discount-text .headline {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+}
+
+.discount-text .subline {
+  font-size: 13px;
+  color: #fff1f1;
+  margin: 0;
+}
+
+/* ৭. নিচের ৪টি কোয়ালিটি বাটন বা ছোট বার */
+.features-bar {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #0b1426;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  border: 1px solid #1e3d75;
+  margin-bottom: 20px;
+}
+
+.features-bar span::before {
+  content: "✓ ";
+  color: #38b000;
+  font-weight: bold;
+}
+
+/* ৮. ফুটার ও শেষ লাইন */
+.poster-footer {
+  text-align: center;
+  background-color: #050b14;
+  padding: 15px;
+  border-radius: 8px;
+  border-top: 2px solid #fca311;
+}
+
+.whatsapp-contact {
+  font-size: 18px;
+  color: #38b000;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.whatsapp-contact span {
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: normal;
+}
+
+.footer-slogan {
+  font-size: 12px;
+  color: #aaaaaa;
+  margin-top: 5px;
+}
+
+/* পালস (Pulse) অ্যানিমেশনের কোড */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+/* ==========================================================================
+   ৯. মূল্যতালিকা টেবিল ডিজাইন (Service Table - Adjusted for Dark/Light Modal)
+   ========================================================================== */
+.service-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+.service-table th, .service-table td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.service-table th {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fca311;
+  font-weight: 600;
+}
+
+.service-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.05); /* মাউস নিলে হালকা গ্লো করবে */
+}
+
+.service-table td:last-child {
+  text-align: right;
+  font-weight: bold;
+  color: #00f5d4; /* মূল্য হাইলাইট করার জন্য ফিরোজা রঙ */
+}
+
+/* ==========================================================================
+   ১০. নোটিশ ও কন্টাক্ট বক্স (Warning & Contact)
+   ========================================================================== */
+.warning-box {
+  background-color: rgba(255, 193, 7, 0.15);
+  color: #ffca28;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-top: 15px;
+  border-left: 4px solid #ffc107;
+  line-height: 1.5;
+}
+
+.contact-box {
+  background-color: #0b2265;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.contact-box p {
+  margin: 4px 0;
+}
+  
+/* গ্যাস ও অন্যান্য সার্ভিসের নতুন কন্টেইনার ডিজাইন */
+.service-container {
+  padding: 10px;
+}
+
+.service-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* আপনার প্রোভাইড করা ডুপ্লিকেট প্রাইস টেবিল যদি HTML এ ব্যবহার করেন */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.price-table th {
+  background-color: #ffffff;
+  color: #0d2346;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.th-left { text-align: left; }
+.th-right { text-align: right; }
+
+.price-table td {
+  padding: 15px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.td-left { text-align: left; }
+.td-right { text-align: right; }
